@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pluto's Creative Space</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Pluto's Creative Space</h1>
+    <nav>
+      <ul>
+        <li><a href="#art">Art Showcase</a></li>
+        <li><a href="#commissions">Commission Workspace</a></li>
+        <li><a href="#pluto-story">Pluto's Story</a></li>
+        <li><a href="#socials">Socials</a></li>
+      </ul>
+    </nav>
+    <input type="text" id="search" placeholder="Search...">
+  </header>
+
+  <main>
+    <!-- Art Showcase Section -->
+    <section id="art">
+      <h2>Art Showcase</h2>
+      <div class="gallery">
+        <!-- Repeatable Image Cards -->
+        <div class="art-card">
+          <img src="art1.jpg" alt="Artwork Title">
+          <p>Artwork Title</p>
+        </div>
+        <!-- Add more here -->
+      </div>
+    </section>
+
+    <!-- Commission Workspace -->
+    <section id="commissions">
+      <h2>Commission Workspace</h2>
+      <p>Coming soon: Info, pricing, request form!</p>
+    </section>
+
+    <!-- Pluto's Story / Lore Section -->
+    <section id="pluto-story">
+      <h2>Pluto's Story</h2>
+      <article>
+        <h3>Chapter 1: The Beginning</h3>
+        <p>Welcome to the lore of Pluto's world. This is where updates and stories will live!</p>
+      </article>
+    </section>
+
+    <!-- Socials Section -->
+    <section id="socials">
+      <h2>Follow Me</h2>
+      <div class="social-icons">
+        <a href="https://instagram.com/yourprofile" target="_blank">
+          <img src="instagram-icon.png" alt="Instagram">
+        </a>
+        <a href="https://twitter.com/yourprofile" target="_blank">
+          <img src="twitter-icon.png" alt="Twitter">
+        </a>
+        <!-- Add more as needed -->
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Pluto. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Simple search/filter script
+    document.getElementById('search').addEventListener('input', function() {
+      const query = this.value.toLowerCase();
+      const sections = document.querySelectorAll('main section');
+      sections.forEach(section => {
+        const match = section.innerText.toLowerCase().includes(query);
+        section.style.display = match ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>
